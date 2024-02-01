@@ -51,7 +51,7 @@ if __name__ == "__main__":
         duration_index = df[(df["depression"] == True) | (df["depression"] == False)].index
         if np.isnan(df.loc[(duration_index[-2]), "phq4"]):
             continue
-        if df.loc[(duration_index[-2]), "phq4"] > 1 and df.loc[(duration_index[-2]), "phq4"] < 6:
+        if df.loc[(duration_index[-2]), "phq4"] > 0 and df.loc[(duration_index[-2]), "phq4"] < 6:
             continue
         depression_label = df.loc[(duration_index[-2]), "depression"]
 
